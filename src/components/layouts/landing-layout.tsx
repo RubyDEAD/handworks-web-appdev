@@ -7,7 +7,7 @@ import LandingFooter from "./footers/landing-footer"
 function LandingLayout(){
     return (
         <div className="min-h-screen flex flex-col">
-            <div className="bg-complement">
+            <div className="bg-complement sticky">
                 <LandingNav />
             </div>
             <main className="flex-grow z-0" style={{ backgroundColor: "#f3f3f6" }}>

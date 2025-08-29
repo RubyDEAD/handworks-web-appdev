@@ -53,8 +53,8 @@ function Nav() {
                 return <Link to={link.link} key={index} 
                 className={`${link.link === location.pathname && 
                     "text-accent border-b-2 border-accent"
-                } capitalize font-medium hover:text-accent transition-all`}>
-                    <span className="text-xl hover:text-slate-800">{link.name}</span></Link>
+                } capitalize font-bold  text-slate-800 hover:text-accent transition-all`}>
+                    <span className="text-xl hover:text-accent">{link.name}</span></Link>
             } )}
         </nav>
     )
