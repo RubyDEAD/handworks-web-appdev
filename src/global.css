@@ -5,6 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-mono: var(--font-geist-mono);
+  --font-heading: "Poppins", sans-serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -17,7 +20,8 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
-  --color-accent: #14E4FF;
+  --color-accent: #2193CC;
+  --color-complement: #D4D0FF;
   --color-accent-foreground: var(--accent-foreground);
 
   --color-border: var(--border);
@@ -165,7 +169,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans leading-relaxed;
+    @apply bg-background text-foreground leading-relaxed font-heading;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-bold;
