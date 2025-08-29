@@ -22,13 +22,19 @@
 
   --color-accent: #2193CC;
   --color-complement: #D4D0FF;
+  --color-highlight: #711FFF;
   --color-accent-foreground: var(--accent-foreground);
 
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --radius: var(--radius);
+  --container-padding: 15px;
+  --container-center: true;
+  --radius-sm: 640px;
+  --radius-md: 768px;
+  --radius-lg: 960px;
+  --radius-xl: 1200px;
 
   --color-sidebar-ring: var(--sidebar-ring);
 
