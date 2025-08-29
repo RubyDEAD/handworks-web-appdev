@@ -9,82 +9,78 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TestRouteImport } from './routes/test'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WelcomeIndexRouteImport } from './routes/welcome/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as LandingIndexRouteImport } from './routes/landing/index'
+import { Route as HomeIndexRouteImport } from './routes/home/index'
+import { Route as AboutIndexRouteImport } from './routes/about/index'
 
-const TestRoute = TestRouteImport.update({
-  id: '/test',
-  path: '/test',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WelcomeIndexRoute = WelcomeIndexRouteImport.update({
-  id: '/welcome/',
-  path: '/welcome/',
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LandingIndexRoute = LandingIndexRouteImport.update({
+  id: '/landing/',
+  path: '/landing/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeIndexRoute = HomeIndexRouteImport.update({
+  id: '/home/',
+  path: '/home/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/about/',
+  path: '/about/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/test': typeof TestRoute
-  '/welcome': typeof WelcomeIndexRoute
+  '/about': typeof AboutIndexRoute
+  '/home': typeof HomeIndexRoute
+  '/landing': typeof LandingIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/test': typeof TestRoute
-  '/welcome': typeof WelcomeIndexRoute
+  '/about': typeof AboutIndexRoute
+  '/home': typeof HomeIndexRoute
+  '/landing': typeof LandingIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/test': typeof TestRoute
-  '/welcome/': typeof WelcomeIndexRoute
+  '/about/': typeof AboutIndexRoute
+  '/home/': typeof HomeIndexRoute
+  '/landing/': typeof LandingIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/test' | '/welcome'
+  fullPaths: '/' | '/about' | '/home' | '/landing' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/test' | '/welcome'
-  id: '__root__' | '/' | '/about' | '/test' | '/welcome/'
+  to: '/' | '/about' | '/home' | '/landing' | '/services'
+  id: '__root__' | '/' | '/about/' | '/home/' | '/landing/' | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  TestRoute: typeof TestRoute
-  WelcomeIndexRoute: typeof WelcomeIndexRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  HomeIndexRoute: typeof HomeIndexRoute
+  LandingIndexRoute: typeof LandingIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/test': {
-      id: '/test'
-      path: '/test'
-      fullPath: '/test'
-      preLoaderRoute: typeof TestRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -92,11 +88,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/welcome/': {
-      id: '/welcome/'
-      path: '/welcome'
-      fullPath: '/welcome'
-      preLoaderRoute: typeof WelcomeIndexRouteImport
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/landing/': {
+      id: '/landing/'
+      path: '/landing'
+      fullPath: '/landing'
+      preLoaderRoute: typeof LandingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home/': {
+      id: '/home/'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -104,9 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  TestRoute: TestRoute,
-  WelcomeIndexRoute: WelcomeIndexRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  HomeIndexRoute: HomeIndexRoute,
+  LandingIndexRoute: LandingIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
