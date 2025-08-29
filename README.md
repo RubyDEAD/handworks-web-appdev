@@ -5,7 +5,6 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38B2AC?style=for-the-badge\&logo=tailwind-css)
 ![TanStack Router](https://img.shields.io/badge/TanStack%20Router-Latest-FF6B6B?style=for-the-badge\&logo=reactrouter)
 ![shadcn/ui](https://img.shields.io/badge/Shadcn/UI-Components-000000?style=for-the-badge)
-![License](https://img.shields.io/github/license/Gnashal/handworks-web?style=for-the-badge)
 
 ---
 
