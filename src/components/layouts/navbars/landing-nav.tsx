@@ -30,7 +30,7 @@ function LandingNav() {
                     <div className="hidden xl:flex items-center gap-8">
                         <Nav />
                         <Link to="/">
-                            <Button className="text-xl bg-fuchsia-50 text-accent hover:bg-accent hover:text-white">Sign Up</Button>
+                            <Button className="text-xl bg-highlight text-white font-semibold hover:bg-accent">Sign Up</Button>
                         </Link>
                     </div>
 
