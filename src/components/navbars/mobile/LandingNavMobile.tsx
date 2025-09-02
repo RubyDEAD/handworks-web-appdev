@@ -1,8 +1,8 @@
-import {Sheet, SheetContent, SheetTrigger, SheetTitle} from "@/components/ui/sheet"
+import {Sheet, SheetContent, SheetTrigger, SheetTitle} from "@/components/ui/sheet.tsx"
 import { Link, useLocation } from "@tanstack/react-router"
 import {GiHamburgerMenu} from "react-icons/gi"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar.tsx"
 
 import logo from "@/assets/logo.jpg"
 
