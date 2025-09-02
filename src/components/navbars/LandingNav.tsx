@@ -1,11 +1,12 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar.tsx"
 import { Link, useLocation } from "@tanstack/react-router"
 import logo from "@/assets/logo.jpg"
-import MobileLandingNav from "./mobile/m-landing-nav"
-import { Button } from "@/components/ui/button"
+import MobileLandingNav from "./mobile/LandingNavMobile.tsx"
+import { Button } from "@/components/ui/button.tsx"
 
 const routes = [
     { name: "home", link: "/home" },
+    { name: "quote", link: "/quote" },
     { name: "services", link: "/services" },
     { name: "about", link: "/about" },
 ]
